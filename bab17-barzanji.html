@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/j.js" type="text/javascript"></script><script src="js/s.js" type="text/javascript"></script>
+  		<script type="text/javascript" src="jquery.min.js"></script>
+
+  
+
+
+
+<style>
+* {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    list-style: none;
+    quotes: none;
+    text-decoration: unset;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+	
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #fffdf1;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #fffdf1;
+    overflow-x: hidden;
+    margin: 0px 0px;
+}
+
+#t {
+    text-align: justify;
+    line-height: 2;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #fffdf1;
+    border-radius: 0px;
+	font-size: 17px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 11px;
+    padding-top: 11px;
+    font-size: 19px;
+	color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+	border-bottom: double #f58181;
+    border-top: double #f58181;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #f2f2f2;
+    border-radius: 0px;
+    line-height: 1.2;
+    font-family: "georgia"
+	text-align: center;
+
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 17px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #0A3158;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+
+
+
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+		
+    }
+	
+	
+	phr {
+		color:#918e8f;
+		font-size:17px;
+		font-style: italic;
+	}
+
+	pnt {
+		color:black;
+		font-size:14px;
+		font-style: italic;
+	}
+
+nav {
+    padding: 10px 20px;
+}
+
+nav .brand a{
+    color: black;
+}
+
+main {
+    padding: 10px 10px 70px;
+    position: relative;
+}
+
+main p {
+    padding: 0px 0;
+}
+.bottom-nav {
+    padding: 5px;
+    background-color: #f2f2f2;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+	padding-left: -5px;
+	border: 0.5px solid #f58181;
+}
+
+.bottom-link-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-nav a {
+    color: #f58181;
+    cursor: pointer;
+}
+
+.bottom-nav a svg {
+    width: 25px;
+}
+
+.bottom-nav a:nth-child(3) {
+    transform: scale(1.5) translateY(-10px);
+    background-color: #f2f2f2;
+    border-radius: 1000px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #f58181;
+    color: #f58181;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .bottom-nav {
+        width: 100%;
+        bottom: 0%;
+        left: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        -webkit-transform: translate(-50%,0%);
+           -moz-transform: translate(-50%,0%);
+            -ms-transform: translate(-50%,0%);
+             -o-transform: translate(-50%,0%);
+                transform: translate(-50%,0%);
+    }
+
+    .bottom-link-nav {
+        position: relative;
+        width: 450px;
+    }
+
+}
+
+
+
+</style>
+<style> 
+	 @font-face{;
+        font-family:"LPMQ_IsepMisbah";
+        src:url("LPMQ_IsepMisbah.ttf")
+    }
+
+	
+	 @font-face{;
+        font-family:"KFGQPC Uthman Taha Naskh Bold";
+        src:url("fonts.ttf")
+    }
+</style>
+	
+    <script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('body').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('body').css("font-size", size);
+            });
+        });
+    </script>
+<script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('#content').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('#content').css("font-size", size);
+            });
+        });
+</script>
+</head>	
+<body>
+<div id="mnj" style="display: block; position: right;">
+<ul id="tejaul">
+	<li><a href="innafatahna-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> اِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِيْنًاۙ  </font></span><br><span class="latinpil"></span><noscript>Sholawat pembuka</noscript></a></li>
+	<li><a href="bab1-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> أَبْتَدِئُ الْإِمْلَاءَ بِاسْمِ الذَّاتِ </font></span><br><span class="latinpil">CHAPTER I</span><noscript>Abtadiul imlaa bismi dzaatil aliyah</noscript></a></li>
+	<li><a href="bab2-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold">  وَ بَعْدُ فَأَقُوْلُ: هُوَ سَيِّدُنَا مُحَمَّدُ بْنُ عَبْدِ اللّٰهِ  </font></span><br><span class="latinpil">CHAPTER II</span><noscript>wa bakdu faakulu huwa</noscript></a></li>
+	<li><a href="bab3-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ لَمَّا أَرَادَ اللّٰهُ تَبَارَكَ وَ تَعَالَى  </font></span><br><span class="latinpil">CHAPTER III</span><noscript>Walamma aroda allahu</noscript></a></li>
+	<li><a href="bab4-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ لَمَّا تَمَّ مِنْ حَمْلِهِ شَهْرَانِ عَلَى </font></span><br><span class="latinpil">CHAPTER IV</span><noscript>Walamma tamma min hamlihi</noscript></a></li>
+	<li><a href="bab5-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ بَرَزَ صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ  </font></span><br><span class="latinpil">CHAPTER V</span><noscript>wabaroza shollallahu alaihi wasallam</noscript></a></li>
+	<li><a href="bab6-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ ظَهَرَ عِنْدَ وِلَادَتِهِ خَوَارِقُ </font></span><br><span class="latinpil">CHAPTER VI</span><noscript>Wadzoharo 'inda wiladzatihi</noscript></a></li>
+	<li><a href="bab7-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ أَرْضَعَتْهُ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ  </font></span><br><span class="latinpil">CHAPTER VII</span><noscript>Waardho'athu</noscript></a></li>
+	<li><a href="bab8-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ كَانَ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ يَشِبُّ </font></span><br><span class="latinpil">CHAPTER VIII</span><noscript>wakaana shollallahu alaihi wasallam</noscript></a></li>
+	<li><a href="bab9-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ لَمَّا بَلَغَ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ </font></span><br><span class="latinpil">CHAPTER IX</span><noscript
+	>walamma balagho</noscript></a></li>
+	<li><a href="bab10-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ لَمَّا بَلَغَ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ خَمْسًا </font></span><br><span class="latinpil">CHAPTER X</span><noscript>walamma balagho</noscript></a></li>
+	<li><a href="bab11-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ لَمَّا بَلَّغَ صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ خَمْسًا وَ ثَلَاثِيْنَ </font></span><br><span class="latinpil">CHAPTER XI</span><noscript>walamma balagho</noscript></a></li>
+	<li><a href="bab12-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ لَمَّا كَمُلَ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ أَرْبَعُوْنَ </font></span><br><span class="latinpil">CHAPTER XII</span><noscript>walamma kamula</noscript></a></li>
+
+	<li><a href="bab13-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ أَوَّلُ مَنْ آمَنَ بِهِ مِنَ الرِّجَالِ: </font></span><br><span class="latinpil">CHAPTER XIII</span><noscript>walamma kamula</noscript></a></li>
+	<li><a href="bab14-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> ثُمَّ أُسْرِيَ بِرُوْحِهِ وَ جَسَدِهِ يَقَظَةً </font></span><br><span class="latinpil">CHAPTER XIV</span><noscript>walamma kamula</noscript></a></li>
+
+	<li><a href="bab15-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold">  ثُمَّ عَرَضَ نَفْسَهُ عَلَى الْقَبَائِلِ </font></span><br><span class="latinpil">CHAPTER XV</span><noscript>summa arodho</noscript></a></li>
+	<li><a href="bab16-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ مَرَّ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ بقُدَيْدٍ  </font></span><br><span class="latinpil">CHAPTER XVI</span><noscript>wama rasulla</noscript></a></li>
+	<li><a href="bab17-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ كَانَ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ أَكْمَلَ النَّاسِ </font></span><br><span class="latinpil">CHAPTER XVII</span><noscript>wakana</noscript></a></li>
+	<li><a href="bab18-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> وَ كَانَ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ شَدِيْدَ الْحَيَاءِ </font></span><br><span class="latinpil">CHAPTER XVIII</span><noscript>wakana</noscript></a></li>
+	<li><a href="bab19-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> اللّٰهُـمَّ يَا بَاسِطَ الْيَدَيْنِ بِالْعَطِيَّةِ </font></span><br><span class="latinpil">CHAPTER XIX</span><noscript>Allahumma</noscript></a></li>
+	<li><a href="bab20-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> يَا نَبِيْ سَلَامٌ عَلَيْكَ </font></span><br><span class="latinpil">CHAPTER XX</span><noscript>Ya Nabi</noscript></a></li>
+	<li><a href="bab21-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> يَا رَبِّ صَلِّ عَلَى مُحَمَّدْ </font></span><br><span class="latinpil">CHAPTER XXI</span><noscript>YA RABBI</noscript></a></li> 
+	<li><a href="yarosulallah-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> يَارَسُوْلَ اللّٰه سَلَامٌ عَلَيْكَ</font></span><br><span class="latinpil">CHAPTER XXII</span><noscript> YA RASUL </noscript></a></li>
+	<li><a href="bab23-barzanji.html"><font size="3" face="KFGQPC Uthman Taha Naskh Bold"> صَلَاةُ اللهْ سَلَامُ اللّٰهْ </font></span><br><span class="latinpil">CHAPTER XXIII</span><noscript> </noscript></a></li> 
+
+
+</ul>
+</div>
+
+
+	
+		</div><div data-role="content"><div id="t">
+	
+
+
+
+<h1>CHAPTER XVII <br/>
+<a class="font-button plus"><img style="bottom:10px;position:fixed;right:0px;width:35px;" src=""/><img src="masjid4.png">&nbsp;&nbsp;<br/><br/>
+<a class="font-button minus"><img style="bottom:10px;position:fixed;left:0px;width:35px;" src=""/><img src="masjid3.png"></a>
+
+</h1><br/><br/>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="arabcenter">
+عَطِّرِاللّٰهُـمَّ قَبْرَهُ الْكَرِيْمَ بِعَرْفٍ شَذِيٍّ مِنْ صَلَاةٍ وَتَسْلِيْمٍ
+<br/>
+اللّٰهُـمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَيْهِ
+
+</div>
+<div class="arab3center"> بِسْمِ اللّٰهِ الرَّحْمنِ الرَّحِيْمِ</div>
+
+
+<div class="arab2center">وَ كَانَ صَلَّى اللهُ عَلَيْهِ وَ سَلَّمَ أَكْمَلَ النَّاسِ خَلْقًا وَ خُلُقًا ذَا ذَاتٍ وَ صِفَاتٍ سَنِيَّةٍ،<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">مَرْبُوْعَ الْقامَةِ، أَبْيَضَ اللَّوْنِ مُشَرَّبًا بِحُمْرَةٍ وَاسِعَ الْعَيْنَيْنِ أَكْحَلَهُمَا، أَهْدَبَ الْأَشْفَارِ قَدْ مُنِحَ الزَّجَجَ حَاجِبَاهُ<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">مُفَلَّجَ الْأَسْنَانِ، وَاسِعَ الْفَمِ حَسَنَهُ، وَاسِعَ الْجَبِيْنِ ذَا جَبْهَةٍ هِلَالِيَّةٍ،<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">سَهْلَ الْخَدَّيْنِ يُرَى فِيْ أَنْفِهِ بَعْضُ احْدِيْدَابٍ، حَسَنَ الْعِرْنَيْنِ أَقْنَاهُ<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">بَعِيْدَ مَا بَيْنَ الْمَنْكَبَيْنِ، سَبْطَ الْكَتِفَيْنِ، ضَخْمَ الْكَرَادِيْسِ، قَلِيْلَ لَحْمِ الْعَقِبِ، كَثَّ اللِّحْيَةِ، عَظِيْمَ الرَّأْسِ، شَعْرُهُ إِلَى الشَّحْمَةِ الْأُذُنِيَّةِ،
+<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">وَ بَيْنَ كَتِفَيْهِ خَاتَمُ النُّبُوَّةِ قَدْ عَمَّهُ النُّورُ وَ عَلَاهُ<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">وَ عَرَقُهُ كَاللُّؤْلُؤِ، وَ عَرْفُهُ أَطْيَبُ مِنَ النَّفَحَاتِ الْمِسْكِيَّةِ،<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">وَ يَتَكَفَّأُ فِيْ مَشْيَتِهِ، كَأَنَّمَا يَنْحَطُّ مِنْ صَبَبٍ ارْتَقَاهُ<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">وَ كَانَ يُصَافِحُ الْمُصَافِحَ بِيَدِهِ الشَّرِيْفَةِ<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">فَيَجِدُ مِنْهَا سَائِرَ الْيَوْمِ رَائِحَةً عَبْهَرِيَّةً،<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">وَ يَضَعُهَا عَلَى رَأْسِ الصَّبِيِّ،<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">فَيُعْرَفُ مَسُّهُ لَهُ مِنْ بَيْنِ الصِّبْيَةِ وَ يُدْرَاهُ<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">يَتَلَأْلَأُ وَجْهُهُ الشَّرِيْفُ تَلَأْلُؤَ الْقَمَرَ فِي اللَّيْلَةِ البَدْرِيَّةِ<span class="noarab">۞</span></div>
+
+
+<div class="arab2center">يَقُوْلُ نَاعِتُهُ: لَمْ أَرَ قَبْلَهُ وَ لَا بَعْدَهُ مِثْلَهُ، وَ لَا بَشَرٌ يَرَاهُ<span class="noarab">۞</span></div>
+
+
+
+
+
+
+</div>
+<br/><br/>
+
+  <div class="bottom-nav">
+    <div class="bottom-link-nav"> 
+    <a href="index.html">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+    </a>
+
+    <a href="bab16-barzanji.html">
+	<svg style="width:30px;height:30px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M18,11V13H10L13.5,16.5L12.08,17.92L6.16,12L12.08,6.08L13.5,7.5L10,11H18M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12Z" /></svg>
+    </a>
+	
+    <a href="">
+    <font size="3" face="LPMQ_IsepMisbah">١٨</font>
+	</a>
+	
+	<a href="bab18-barzanji.html">
+      <svg style="width:30px;height:30px" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M6,13V11H14L10.5,7.5L11.92,6.08L17.84,12L11.92,17.92L10.5,16.5L14,13H6M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12Z" /></svg>
+    </a>
+	
+    <a href="#" id="tmnj">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+    </a>
+	
+
+    </div>
+
+
+
+
+
+</body>
+</html>
